@@ -22,7 +22,7 @@ public class AgifyApiTest {
     }
 
     @Test
-    public void whenPredictingAgeWithName_thenError() {
+    public void whenPredictingAgeWithName_thenSuccess() {
         given().queryParam("name", "Natalie")
                 .when()
                 .get("https://api.agify.io/")
