@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.not;
 public class AgifyApiTest {
 
     @Test
-    public void whenPredictingAgeWithoutName_thenError() {
+    public void givenNoName_whenAgify_thenError() {
         given()
         .when()
         .get("https://api.agify.io/")
@@ -22,7 +22,7 @@ public class AgifyApiTest {
     }
 
     @Test
-    public void whenPredictingAgeWithName_thenSuccess() {
+    public void givenName_whenAgify_thenSuccess() {
         given().queryParam("name", "Natalie")
                 .when()
                 .get("https://api.agify.io/")
